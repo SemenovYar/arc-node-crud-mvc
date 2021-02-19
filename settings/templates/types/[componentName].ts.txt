@@ -1,0 +1,14 @@
+export type {{toCamelCase(componentName)}}CreationAttributes = {
+  name: string;
+};
+
+export type {{toCamelCase(componentName)}} = {{toCamelCase(componentName)}}CreationAttributes & {
+  id: number;
+  removedAt?: Date;
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+export type {{toCamelCase(componentName)}}UpdatingAttributes = {
+  name?: string;
+};

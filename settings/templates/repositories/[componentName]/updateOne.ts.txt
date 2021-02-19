@@ -1,0 +1,12 @@
+import { {{toUpperFirst(componentName)}}UpdatingAttributes } from '../../types';
+import { {{toUpperFirst(componentName)}} } from '../../models';
+
+export const updateOne = async ({
+  {{toCamelCase(componentName)}}Id,
+  {{toCamelCase(componentName)}},
+}: {
+  {{toCamelCase(componentName)}}Id: number;
+  {{toCamelCase(componentName)}}: {{toUpperFirst(componentName)}}UpdatingAttributes;
+}): Promise<boolean> => {
+  return (await {{toUpperFirst(componentName)}}.update({{toCamelCase(componentName)}}, { where: { id: {{toCamelCase(componentName)}}Id } }))[0] === 1;
+};

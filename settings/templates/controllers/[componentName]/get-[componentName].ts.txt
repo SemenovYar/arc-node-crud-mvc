@@ -1,0 +1,12 @@
+import { {{toCamelCase(componentName)}} } from '../../types';
+import { {{toCamelCase(componentName)}}Repository } from '../../repositories/{{toLowerCamelCase(componentName)}}';
+
+export const get{{toCamelCase(componentName)}} = async ({
+  {{toLowerCamelCase(componentName)}}Id,
+}: {
+  {{toLowerCamelCase(componentName)}}Id: number;
+}): Promise<{{toCamelCase(componentName)}}> => {
+  const {{toLowerCamelCase(componentName)}} = await {{toCamelCase(componentName)}}Repository.selectById({{toLowerCamelCase(componentName)}}Id);
+
+  return {{toLowerCamelCase(componentName)}};
+};

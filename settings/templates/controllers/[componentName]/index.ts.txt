@@ -1,0 +1,11 @@
+import { create{{toUpperFirst(componentName)}} } from './create{{toUpperFirst(componentName)}}';
+import { get{{toUpperFirst(componentName)}} } from './get{{toUpperFirst(componentName)}}';
+import { update{{toUpperFirst(componentName)}} } from './update{{toUpperFirst(componentName)}}';
+import { delete{{toUpperFirst(componentName)}} } from './delete{{toUpperFirst(componentName)}}';
+
+export default {
+  create{{toUpperFirst(componentName)}} ,
+  get{{toUpperFirst(componentName)}},
+  update{{toUpperFirst(componentName)}},
+  delete{{toUpperFirst(componentName)}}
+};

@@ -1,0 +1,39 @@
+import { Sequelize, DataTypes, ModelDefined } from 'sequelize';
+import sequelize from '../helpers/db';
+import { {{toCamelCase(componentName)}}, {{toCamelCase(componentName)}}CreationAttributes } from '../types';
+
+export const {{toCamelCase(componentName)}}: ModelDefined<{{toCamelCase(componentName)}}, {{toCamelCase(componentName)}}CreationAttributes> = sequelize.define(
+  '{{toCamelCase(componentName)}}',
+  {
+    id: {
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+      type: DataTypes.INTEGER,
+    },
+    name: {
+      allowNull: false,
+      type: DataTypes.STRING,
+    },
+    removedAt: {
+      field: 'removed_at',
+      type: 'TIMESTAMP',
+    },
+    createdAt: {
+      allowNull: false,
+      field: 'created_at',
+      type: 'TIMESTAMP',
+      defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+    },
+    updatedAt: {
+      allowNull: false,
+      field: 'updated_at',
+      type: 'TIMESTAMP',
+      defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+    },
+  },
+  {
+    tableName: '{{toSnakeCase(componentName)}}',
+    timestamps: true,
+  },
+);

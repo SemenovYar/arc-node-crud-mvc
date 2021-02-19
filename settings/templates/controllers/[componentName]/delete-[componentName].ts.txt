@@ -1,0 +1,9 @@
+import { {{toUpperCase(componentName)}}_NOT_FOUND } from '../../helpers/errors';
+import { {{toCamelCase(componentName)}}Repository } from '../../repositories/{{toCamelCase(componentName)}}';
+
+
+export const delete{{toCamelCase(componentName)}} = async ({{toLowerCamelCase(componentName)}}Id: number, initiatorUser: ReqUser): Promise<boolean> => {
+  const {{toLowerCamelCase(componentName)}} = await {{toCamelCase(componentName)}}Repository.selectById({{toLowerCamelCase(componentName)}}Id);
+
+  return {{toCamelCase(componentName)}}Repository.markOneLikeRemoved({{toLowerCamelCase(componentName)}}Id);
+};

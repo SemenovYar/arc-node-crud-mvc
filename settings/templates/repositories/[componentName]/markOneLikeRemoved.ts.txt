@@ -1,0 +1,5 @@
+import { {{toUpperFirst(componentName)}} } from '../../models';
+
+export const markOneLikeRemoved = async ({{toCamelCase(componentName)}}Id: number): Promise<boolean> => {
+  return (await {{toUpperFirst(componentName)}}.update({ removedAt: new Date() }, { where: { id: {{toCamelCase(componentName)}}Id } }))[0] === 1;
+};

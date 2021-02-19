@@ -1,0 +1,12 @@
+import { Model, Op } from 'sequelize';
+import { {{toUpperFirst(componentName)}} } from '../../models';
+import { {{toUpperFirst(componentName)}} } from '../../types';
+import { removedAtNullWhere } from '../../helpers/repositoryUtils';
+
+export const selectById = async ({{toCamelCase(componentName)}}Id: number): Promise<{{toUpperFirst(componentName)}}> => {
+  const {{toCamelCase(componentName)}} = await {{toUpperFirst(componentName)}}.findOne<Model<{{toUpperFirst(componentName)}}>>({
+    where: { [Op.and]: [{ id: {{toCamelCase(componentName)}}Id }, removedAtNullWhere] },
+  });
+
+  return {{toCamelCase(componentName)}}?.get({ plain: true });
+};

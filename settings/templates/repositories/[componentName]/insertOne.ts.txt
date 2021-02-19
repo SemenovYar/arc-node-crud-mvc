@@ -1,0 +1,12 @@
+import { {{toUpperFirst(componentName)}}, {{toUpperFirst(componentName)}}CreationAttributes } from '../../types';
+import { {{toUpperFirst(componentName)}} } from '../../models';
+
+export const insertOne = async ({
+  name
+}: {{toCamelCase(componentName)}}CreationAttributes): Promise<{{toUpperFirst(componentName)}}> => {
+  const {{toCamelCase(componentName)}} = await {{toUpperFirst(componentName)}}.create({
+    name
+  });
+
+  return {{toCamelCase(componentName)}}?.get();
+};

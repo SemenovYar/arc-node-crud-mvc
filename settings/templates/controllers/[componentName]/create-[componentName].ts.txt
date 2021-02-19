@@ -1,0 +1,10 @@
+import { {{toCamelCase(componentName)}}, {{toCamelCase(componentName)}}CreationAttributes } from '../../types';
+import { {{toCamelCase(componentName)}}Repository } from '../../repositories/{{toLowerCamelCase(componentName)}}';
+
+export const create{{toCamelCase(componentName)}} = async ({
+  name
+}: {{toCamelCase(componentName)}}CreationAttributes): Promise<{{toCamelCase(componentName)}}> => {
+  return {{toCamelCase(componentName)}}Repository.insertOne({
+    name
+  });
+};

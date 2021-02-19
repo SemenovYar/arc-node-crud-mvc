@@ -1,0 +1,11 @@
+import { insertOne } from './insertOne';
+import { selectById } from './selectById';
+import { updateOne } from './updateOne';
+import { markOneLikeRemoved } from './markOneLikeRemoved';
+
+export const {{toUpperFirst(componentName)}}Repository = {
+  insertOne,
+  selectById,
+  updateOne,
+  markOneLikeRemoved
+};

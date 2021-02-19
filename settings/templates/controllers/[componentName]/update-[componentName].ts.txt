@@ -1,0 +1,19 @@
+import { {{toCamelCase(componentName)}}UpdatingAttributes} from '../../types';
+import { {{toCamelCase(componentName)}}Repository } from '../../repositories/{{toLowerCamelCase(componentName)}}';
+
+export const update{{toCamelCase(componentName)}} = async ({
+  {{toLowerCamelCase(componentName)}}Id,
+  updating{{toCamelCase(componentName)}},
+}: {
+  {{toLowerCamelCase(componentName)}}Id: number;
+  updating{{toCamelCase(componentName)}}: {{toCamelCase(componentName)}}UpdatingAttributes;
+}): Promise<boolean> => {
+  const {{toLowerCamelCase(componentName)}} = await {{toCamelCase(componentName)}}Repository.selectById({{toLowerCamelCase(componentName)}}Id);
+
+  await {{toCamelCase(componentName)}}Repository.updateOne({
+    {{toLowerCamelCase(componentName)}}Id,
+    {{toLowerCamelCase(componentName)}}: updating{{toCamelCase(componentName)}},
+  });
+
+  return true;
+};
